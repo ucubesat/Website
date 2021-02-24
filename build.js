@@ -22,8 +22,9 @@ const copyDirectoryToBuildDirPaths = [];
 if (fs.existsSync(buildDir)) {
     console.info("Deleting contents of build directory: %s", buildDir);
     fs.rmdirSync(buildDir, {recursive: true});
-    fs.mkdirSync(buildDir)
 }
+
+fs.mkdirSync(buildDir)
 
 // Copy files defined in 'copyFileToBuildDirPaths'
 for (let pathIndex = 0; pathIndex < copyFileToBuildDirPaths.length; pathIndex++) {
