@@ -66,3 +66,8 @@ a button:hover {
     transform: translateY(-3px);
     background-color: #e20b0b;
 }
+
+.social-link img {
+    margin: 25px 25px;
+    width: 40px;
+}
