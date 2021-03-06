@@ -7,13 +7,7 @@ const MobileDetect = require('mobile-detect/mobile-detect.min');
 
 $(window).on('load', function () {
     if (MobileDetect.mobile != null) {
-        $('.email-button').click(function () {
-            const animationClassName = 'animation-up';
-            $('.email-button-copied-text').addClass(animationClassName);
-            setTimeout(function () {
-                $('.email-button-copied-text').removeClass(animationClassName);
-            }, 2000);
-        });
+        $('.email-button').attr("href", "mailto:contact@ucubesat.org");
     } else {
         $('.email-button').click(function () {
             const animationClassName = 'animation-up';
@@ -22,6 +16,5 @@ $(window).on('load', function () {
                 $('.email-button-copied-text').removeClass(animationClassName);
             }, 2000);
         });
-        // $('.email-button').attr("href", "mailto:contact@ucubesat.org");
     }
 });

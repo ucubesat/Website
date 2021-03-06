@@ -1,5 +1,4 @@
 .DS_Store
-dist/
-out/
+public/js/
 .idea/
 node_modules/
