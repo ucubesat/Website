@@ -45,15 +45,15 @@ p {
 
 a {
     text-decoration: none;
-    padding: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
 }
 
-a button {
+.main-link {
     font-size: 11pt;
     border: white solid 2px;
     border-radius: 30px;
-    outline: none;
-    cursor: pointer;
     padding: 8px 30px;
     transition: 0.3s ease all;
     background-color: black;
@@ -62,12 +62,36 @@ a button {
     margin: 20px;
 }
 
-a button:hover {
-    transform: translateY(-3px);
+.main-link:hover {
+    transform: translateY(-4px);
     background-color: #e20b0b;
 }
 
-.social-link img {
+.social-link {
     margin: 25px 25px;
     width: 40px;
+}
+
+.email-button-text {
+    padding: 0;
+    margin: 0;
+}
+
+.email-button-copied-text {
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-1em);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.email-button-copied-text.animation-up {
+    opacity: 1;
+    transform: translateY(-50px) translateX(-1em);
 }

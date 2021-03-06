@@ -10,6 +10,8 @@
     <meta name="description" content="CubeSat club at the University of Utah">
     <meta name="author" content="UCubeSat">
 
+    <script crossorigin src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -23,18 +25,13 @@
     <br>
     <p>The CubeSat Club at The University of Utah (UCubeSat) seeks to provide opportunities for students to get involved
         in a space-related engineering project by researching, designing, and launching a CubeSat into space.</p>
-    <a href="mailto:contact@ucubesat.org">
-        <button>Email</button>
+    <a class="main-link email-button" data-clipboard-text="contact@ucubesat.org">
+        <span class="email-button-copied-text">Copied to clipboard!</span>
+        <span class="email-button-text">Email</span>
     </a>
-    <a href="https://getinvolved.utah.edu/organization/cube">
-        <button>Campus Connect</button>
-    </a>
-    <a href="https://discord.gg/5UnatEGgh9">
-        <button>Discord</button>
-    </a>
-    <a href="https://github.com/ucubesat">
-        <button>Github</button>
-    </a>
+    <a class="main-link" href="https://getinvolved.utah.edu/organization/cube">Campus Connect</a>
+    <a class="main-link" href="https://discord.gg/5UnatEGgh9">Discord</a>
+    <a class="main-link" href="https://github.com/ucubesat">Github</a>
     <br>
     <a class="social-link" href="https://www.instagram.com/ucubesatclub/">
         <img src="assets/instagram.png" alt="Instagram">
@@ -42,7 +39,11 @@
     <a class="social-link" href="https://twitter.com/UCubeSat/">
         <img src="assets/twitter.png" alt="Twitter">
     </a>
+    <a class="social-link" href="https://www.youtube.com/channel/UCvTbZpmXpXPBtBXikpUD5kQ">
+        <img src="assets/youtube.png" alt="YouTube">
+    </a>
 </div>
+<script src="js/bundle.js"></script>
 </body>
 
 </html>

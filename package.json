@@ -4,7 +4,8 @@
   "description": "Website for the UCubeSat club",
   "main": "index.js",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "watch": "node build.js --watchify"
   },
   "author": "UCubeSat Team",
   "license": "MIT",
@@ -12,9 +13,21 @@
     "url": "https://github.com/ucubesat/Website/issues"
   },
   "homepage": "https://github.com/ucubesat/Website#readme",
-  "dependencies": {},
   "devDependencies": {
+    "@babel/preset-env": "^7.13.9",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "browserify-shim": "^3.8.14",
     "ncp": "^2.0.0",
+    "watchify": "^4.0.0",
     "yargs": "^16.2.0"
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.6",
+    "jquery": "^3.6.0",
+    "mobile-detect": "^1.4.4"
   }
 }
