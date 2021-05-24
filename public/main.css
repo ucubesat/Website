@@ -54,12 +54,12 @@ a {
     font-size: 11pt;
     border: white solid 2px;
     border-radius: 30px;
-    padding: 8px 30px;
+    padding: 8px 20px;
     transition: 0.3s ease all;
     background-color: black;
     color: white;
     letter-spacing: 1.5pt;
-    margin: 20px;
+    margin: 10px;
 }
 
 .main-link:hover {
