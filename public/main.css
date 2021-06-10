@@ -17,7 +17,18 @@ body {
     background-color: black;
 }
 
+.landing-background {
+    position: fixed;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("assets/background_space.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .content {
+    opacity: 0;
     margin: 0 auto;
     padding: 0 20px;
     width: 800px;
@@ -25,59 +36,67 @@ body {
     text-align: center;
 }
 
-video {
+.content video {
     margin-top: -25px;
-    width: 500px;
+    width: 430px;
     max-width: 100%;
 }
 
-img {
+.content img {
     width: 800px;
     max-width: 100%;
 }
 
-p {
+.content p {
     margin: 30px 30px;
     color: white;
     font-size: 14pt;
     letter-spacing: 1.25pt;
+    text-align: justify;
 }
 
-a {
+.content ul {
+    margin: 30px 30px;
+    color: white;
+    font-size: 14pt;
+    letter-spacing: 1.25pt;
+    text-align: left;
+}
+
+.content a {
     text-decoration: none;
     cursor: pointer;
     position: relative;
     display: inline-block;
 }
 
-.main-link {
+.content .main-link {
     font-size: 11pt;
     border: white solid 2px;
     border-radius: 30px;
     padding: 8px 20px;
     transition: 0.3s ease all;
-    background-color: black;
     color: white;
     letter-spacing: 1.5pt;
     margin: 10px;
 }
 
-.main-link:hover {
+.content .main-link:hover {
     transform: translateY(-4px);
     background-color: #e20b0b;
 }
 
-.social-link {
+.content .social-link {
     margin: 25px 25px;
     width: 40px;
 }
 
-.email-button-text {
+.content .email-button-text {
     padding: 0;
     margin: 0;
 }
 
-.email-button-copied-text {
+.content .email-button-copied-text {
     z-index: -1;
     opacity: 0;
     position: absolute;
@@ -91,7 +110,7 @@ a {
     transition: all 0.25s ease-in-out;
 }
 
-.email-button-copied-text.animation-up {
+.content .email-button-copied-text.animation-up {
     opacity: 1;
     transform: translateY(-50px) translateX(-1em);
 }
