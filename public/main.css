@@ -9,6 +9,7 @@
 
 html {
     height: 100%;
+    overflow-anchor: none; /* For Chrome auto-scroll anchoring prevention */
 }
 
 body {
@@ -36,13 +37,23 @@ body {
     text-align: center;
 }
 
-.content video {
+.content img {
+    max-width: 100%;
+}
+
+.content .logo-container video {
     margin-top: -25px;
     width: 430px;
     max-width: 100%;
 }
 
-.content img {
+.content .logo-container img {
+    margin: 25px 0;
+}
+
+.content .logo-container .logo-name {
+    margin-top: -30px;
+    margin-bottom: 0;
     width: 800px;
     max-width: 100%;
 }
@@ -61,6 +72,26 @@ body {
     font-size: 14pt;
     letter-spacing: 1.25pt;
     text-align: left;
+}
+
+.content li {
+    margin: 10px 40px;
+}
+
+@media screen and (max-width: 480px) {
+    .content p {
+        margin: 15px 10px;
+        text-align: left;
+    }
+
+    .content ul {
+        margin: 15px 10px;
+        text-align: left;
+    }
+
+    .content li {
+        margin: 10px 5px;
+    }
 }
 
 .content a {

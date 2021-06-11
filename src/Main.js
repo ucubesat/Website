@@ -1,7 +1,20 @@
 import $ from 'jquery';
 import Clipboard from 'clipboard';
+import Bowser from 'bowser';
 
-new Clipboard('.email-button');
+const browser = Bowser.getParser(window.navigator.userAgent);
+const isValidBrowser = browser.satisfies({
+    desktop: {
+        firefox: '>=28',
+        chrome: '>=25',
+        edge: '>=79'
+    }
+});
+if (isValidBrowser) {
+    $('.logo-container').prepend('<video width="100%" height="100%" id="logo-animated" playsinline autoplay muted><source src="assets/logo_animated.webm" type="video/webm"></video>');
+} else {
+    $('.logo-container').prepend('<img src="assets/logo.png" alt="UCubeSat Logo">');
+}
 
 // Source of below: https://stackoverflow.com/a/20082518
 // Generic function to set blur radius of $ele
@@ -24,6 +37,8 @@ const setBlur = function (ele, radius) {
             }
         });
     };
+
+new Clipboard('.email-button');
 
 $(window).on('load', function () {
     $('.email-button').click(function () {
